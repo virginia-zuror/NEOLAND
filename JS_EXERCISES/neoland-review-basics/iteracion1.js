@@ -16,6 +16,7 @@ for (const movie of movies) {
          if(!categoriasPeliculas.includes(category)){
                 categoriasPeliculas.push(category);
                 categoriasPeliculas.sort()
+                
          }                
     }
 }
