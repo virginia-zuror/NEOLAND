@@ -1,43 +1,18 @@
-const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
-let cadenaLarga;
+const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Captain M.', 'Spiderman'];
 
-for(let i = 0; i< avengers.length; i++){
-  let primero = avengers[0].length;
+function findLongestWord (param){
+  let cadenaLarga = "";// hay que definirla en la funcion para poder retornarla tambien aqui. 
+  //Mejor no dar valor 0
 
-  if(avengers[i].length >= primero){
-    cadenaLarga = avengers[i];
-    primero = avengers[i];
-    
-  }
+ for (const avenger of avengers) {
   
-}
-console.log(cadenaLarga);
+     if(avenger.length > cadenaLarga.length){// si la palabra en la que esta es mayor que ""(de cadenaLarga)
+      cadenaLarga = avenger; // coges y cadenaLarga toma el valor avenger (en el que esta el bucle en ese momento)
+     }  // pasa al siguiente y compara, da igual si es igual de larga porque nos interesaría la primera solo en este caso.
+   }
+ //return cadenaLarga;
+ console.log(cadenaLarga);// hay que hacer el return en el ambito solo de la funcion.
+};
 
-
-
-
-
-
-
-
-  /*for (let i=0; i< avengers.length; i++){
-    
-    let cadena = avengers[0].length;
-   
-    if(cadena > [i].length){
-      cadena = avengers[i];
-      console.log(cadena);
-      }
-    }
- */
-    
-
-
-    
-    
-
-
-    
-  
-
+findLongestWord( avengers);
 
