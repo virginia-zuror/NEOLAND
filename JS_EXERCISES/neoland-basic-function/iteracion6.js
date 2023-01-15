@@ -31,6 +31,7 @@ const removeDuplicates = () => {
     }
   });
   console.log(copia);
+  return copia;
 };
    
   removeDuplicates(duplicates)
