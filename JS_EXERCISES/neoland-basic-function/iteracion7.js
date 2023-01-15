@@ -11,8 +11,17 @@ const nameFinder = [
     'Jessica',
     'Marc'
   ];
-  function finderName(param) {
+  /* function finderName(param) {
     nameFinder.includes(param)? console.log(nameFinder.includes(param), nameFinder.indexOf(param)): console.log(nameFinder.includes(param));
-     }
+     } */
+// EN ARROW Y TERNARIO
 
-  finderName(param)
+     const finderName = (name) => {
+      let resultado;
+       nameFinder.includes(name)? resultado = `${nameFinder.includes(name)} ${nameFinder.indexOf(name)}` : resultado = `${nameFinder.includes(name)}`;
+      console.log(resultado);
+      return resultado;
+      
+       }
+  
+       finderName('marc');

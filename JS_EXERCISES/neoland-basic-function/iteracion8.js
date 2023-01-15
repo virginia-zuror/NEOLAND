@@ -12,7 +12,7 @@ const counterWords = [
     'code'
   ];
   
-   function repeatCounter(param) {
+/*    function repeatCounter(param) {
     let contador=[];
     param.forEach((element) => {
     if(contador[element]){
@@ -22,6 +22,16 @@ const counterWords = [
     }
     
   });
+return contador;
+} */
+
+//EN ARROW Y TERCIARIO
+
+const repeatCounter = (param) => {
+  let contador=[];
+  param.forEach((element) => {
+  contador[element] ? contador[element]++ : contador[element]=1;
+});
 return contador;
 }
 console.log(repeatCounter(counterWords));

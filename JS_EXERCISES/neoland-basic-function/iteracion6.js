@@ -11,7 +11,7 @@ const duplicates = [
     'pasta',
     'soda'
   ];
-  function removeDuplicates(param) {
+  /* function removeDuplicates(param) {
 
     const copia = [];
     
@@ -21,6 +21,16 @@ const duplicates = [
        }
     });
     console.log(copia);
+}; */
+// EN ARROW
+const removeDuplicates = () => {
+  const copia = [];
+  duplicates.forEach(word => {        
+    if(!copia.includes(word)){
+      copia.push(word);
+    }
+  });
+  console.log(copia);
 };
    
   removeDuplicates(duplicates)
