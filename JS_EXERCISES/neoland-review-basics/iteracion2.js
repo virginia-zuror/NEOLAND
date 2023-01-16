@@ -28,8 +28,16 @@ const users = [
         }
     },
 ]
-
-
+let sum = 0;
+let numberOfSounds = 0;
+for (const user of users) {
+    for (const key in user.favoritesSounds) {
+        sum += user.favoritesSounds[key].volume;// KEY ES CADA UNA DE LAS CATEGORIAS DE FAVORITESOUNDS, Y DE ELLAS NOS INTERESA SOLO VOLUME.
+        numberOfSounds += 1; // NOS PIDE EL TOTAL DE SONIDOS FAVORITOS DE LOS USUARIOS, COMO NO ES UN ARRAY, EL .LENGTH NO TRABAJA, VAMOS SUMANDO 1 POR CADA SONIDO DEL QUE COJA EL VOLUMEN.
+    } 
+}
+let result = sum / numberOfSounds;
+console.log(result);
 
 
    

@@ -3,7 +3,8 @@ const rollDice = (sides) => {
     sidesToFormula = sides+1;
     return Math.floor(Math.random()*sidesToFormula)+1;
    
-   /*OTRO METODO   
+   /*OTRO METODO  
+    
    min = 1;
     max = max+1;
     return Math.floor(Math.random() * (max - min) + min); */
