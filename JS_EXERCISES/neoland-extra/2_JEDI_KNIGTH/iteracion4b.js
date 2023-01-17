@@ -1,21 +1,18 @@
 
 let index;
 const findArrayIndex = (array,text) => {
-    
-    for (const item of array) {
-        array['item'].toUpperCase('item');//ERROR NO SE PONE EL ITEM EN MAYUSCULAS
-       array[item].includes(text)?
-        index= array.indexOf(text):
-        index = `El segundo argumento no existe en el array`
+   array2 = [...array];// si no lo compio, el valor final de resultado me devuelve el array todo en mayusculas y es mejor que sea el original.
+    for (let i=0; i< array2.length; i++) {
+        array2[i] = array2[i].toUpperCase();
+        index= array2.indexOf(text);
     };
-    return index;
+    
+     return index;
+
 }
 
 const removeItem = (array, text) =>{
-    text = text.toUpperCase();
-    
-    console.log(text);
-    
+    text = text.toUpperCase();      
     findArrayIndex(array, text);
     array.splice(index,1);
     return array;
@@ -41,6 +38,6 @@ const lotrCities = [
     "Hobbiton"
 ]
 
-console.log(removeItem(mainCharacters, "Rey"));
-console.log(removeItem(lotrCities, "Moria"));
+console.log(removeItem(mainCharacters, "aNaKiN"));
+console.log(removeItem(lotrCities, "moRia"));
 
