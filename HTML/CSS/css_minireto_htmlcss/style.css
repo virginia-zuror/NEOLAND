@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(43, 43, 43,0.5);
+    color: whitesmoke;
+  }
+  header{
+    padding: 10px;
+    
+    height: 25%;
+    margin-top: 10%;
+  }
+  main{
+    border: 1px white solid;
+    border-radius: 10px;
+    height: 75%;
+    padding: 10px;
+  }
+  
+  h1 {
+    color: bisque;
+    text-align: center;
+    font-style: oblique;
+    text-transform: uppercase;
+  }
+  
+  li {
+    font-size: 20px;
+    list-style: none;
+    color: crimson;
+    font-style: italic;
+  }
