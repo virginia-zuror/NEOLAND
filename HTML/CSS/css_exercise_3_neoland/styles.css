@@ -1,0 +1,20 @@
+*{
+    --primaryColor: #c92a2a;
+    --secondaryColor: #a61e4d;
+    --otherColor:#364fc7 ;
+}
+
+h1{
+    color: var(--primaryColor);
+}
+h2{
+    color: var(--secondaryColor);
+}
+
+.first, .second {
+    color: var(--otherColor);
+
+}
+.second{
+    border-bottom: 1px solid var(--primaryColor);
+}
