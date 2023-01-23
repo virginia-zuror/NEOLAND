@@ -1,0 +1,82 @@
+footer{
+    background-image: url("https://res.cloudinary.com/dfnh5hecu/image/upload/v1674466529/Dayseeker/background_k36qdk.webp");
+    padding: 4rem 3rem;
+    height: 24rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: start;
+    justify-content: center;
+    align-content: center;
+    justify-items:stretch;
+    grid-gap: 2rem;
+    margin: 0 0 0 -22px;
+}
+.search {
+    display:flex;
+    align-items: flex-end;
+    margin: 0px 0px 3.4px;
+    margin-left: 20rem;
+    text-decoration: none;
+}
+.search > input{
+    font-size: 16px;
+    width: 15rem;
+    border-bottom: none;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: 8rem;
+}
+.form > h3 {
+    font-size: 19px;
+    letter-spacing: 3.6px;
+    line-height: 19.2px;
+    margin: 0 0 20px;
+}
+.form > p{
+    line-height: 21.76px;
+    margin: 0 0 15px;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+}
+.form > ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:2rem;
+}
+.form > ul > li {
+    filter:brightness(10);
+    width: 30px;
+    
+}
+#email {
+    width: 30rem;
+    font-size: 3rem;
+    
+}
+.form > div > label > img{
+    width: 22px;
+    filter: invert(100%);
+   position: relative;
+   right: 3rem;
+}
+.tech {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tech > h3{
+    font-size: 15px;
+    padding: 1rem;
+    
+   
+}
+

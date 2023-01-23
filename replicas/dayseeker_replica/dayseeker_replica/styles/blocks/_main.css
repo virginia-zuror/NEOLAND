@@ -1,0 +1,45 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.42;
+    color: var(--primary);
+    text-decoration: none;
+    text-shadow: black 1px right;
+    text-align: center;
+    white-space: normal;
+    font-size: 13px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 11px 20px;
+    background-color: var(--button);
+    border: transparent;
+    letter-spacing: 0.3rem;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+}
+@keyframes button_flash {
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+button:hover{
+    background: linear-gradient(50deg, #ffffff69, #070c0a3a, rgba(255, 255, 255, 0.589));
+    background-size: 400% 400%;
+    text-emphasis-color: rgba(255, 255, 255, 0.581);
+    animation: button_flash 3s alternate-reverse infinite;
+}
