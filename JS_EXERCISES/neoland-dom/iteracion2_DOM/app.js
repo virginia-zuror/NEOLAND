@@ -59,7 +59,7 @@ for (const app of apps) {//recorro array
 //2.8 Inserta una p con el texto 'Voy en medio!' entre los dos div. 
 //	Recuerda que no solo puedes insertar elementos con .appendChild.
 
- const findDivs = document.querySelectorAll("div");
+/*  const findDivs = document.querySelectorAll("div");
 for (const item of findDivs) {
     if(!item.hasAttributes("")){//no queremos aquellos div con atributo de clase
         const newPElement = document.createElement("p");
@@ -67,7 +67,17 @@ for (const item of findDivs) {
         newPElement.appendChild(newText);
         item.appendChild(newPElement);
     };  
-};  
+};   */
+    
+
+const newTemplate = document.querySelector("div"); 
+
+newTemplate.insertAdjacentHTML(
+    "afterbegin",
+    `<p>Voy en medio!</p>`
+) 
+
+
 
 
 //2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase .fn-insert-here*/
