@@ -69,22 +69,28 @@ for (const item of findDivs) {
     };  
 };   */
     
-
-const newTemplate = document.querySelector("div"); 
-
-newTemplate.insertAdjacentHTML(
-    "afterbegin",
-    `<p>Voy en medio!</p>`
-) 
+//usando otro metodo 
+const newTemplate = document.querySelectorAll("div"); 
+for (const item of newTemplate) {
+    if(!item.hasAttributes("")){
+        item.insertAdjacentHTML(
+            "afterbegin",
+            `<p>Voy en medio!</p>`
+        );     
+    }
+};
 
 
 
 
 //2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase .fn-insert-here*/
 const myDivsWithClass = document.querySelectorAll(".fn-insert-here");
-for (const div of myDivsWithClass) {
+
+for (const item of myDivsWithClass) {
+    if(item.matches("div")){
     const newPTag = document.createElement("p");
     const ImIn = document.createTextNode("Voy dentro!");
         newPTag.appendChild(ImIn);
-        div.appendChild(newPTag);  
+        item.appendChild(newPTag);
+    }  
 };  
