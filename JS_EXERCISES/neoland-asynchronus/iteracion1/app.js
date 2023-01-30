@@ -1,8 +1,8 @@
 // 1.1
-/*  fetch ('https://api.agify.io?name=michael')
+ fetch ('https://api.agify.io?name=michael')
 .then(response => response.json())
-.then(data => console.log(data)); 
-  */
+.then(response => console.log(response)); 
+  
 //1.2
 
 /* const baseUrl= 'https://api.nationalize.io';
@@ -83,46 +83,42 @@ const button = document.querySelector("button");
 const input = document.querySelector("input");
 const container = document.querySelector("#container");  
 
-    const getResults = async () => {
-        
-        const data = await fetch(`${baseUrl}?name=${input.value}`);
-        const json = await data.json();
-        const results = json.country ;
+const getResults = async () => {
+  
+    const res = await fetch(`${baseUrl}?name=${input.value}`);
+    
+    const data = await res.json();
+    
+    printResult(data.country, data.name);
+  };
+    
+    const printResult = (countries, name) => {
+        for (const country of countries) {
+          const div = document.createElement("div");
+          
+          const p = document.createElement("p");
+          
+          p.textContent = `El nombre ${name} tiene un ${country.probability} de probabilidad de ser de ${country.country_id}. `;
+            div.appendChild(p);
 
-        
-      
-        const created = document.createElement("p");
-        created.setAttribute("id", `"${input.value}"`);
-          container.innerHTML += `
-        <article>
-        <button>X</button>
-        </article> `;
-        
-        for (const result of results) {
-            let i = results.length-1;   
+          const btnP = document.createElement("button");
+          btnP.innerHTML = "X";
+          btnP.addEventListener("click", () => 
+            div.remove());
 
-            if(result == results[0]){
-                created.innerHTML += `El nombre ${input.value} tiene un ${result.probability} de probabilidad de ser de ${result.country_id},`
-            }else if(result == results[i]){
-                created.innerHTML += ` y un ${result.probability} de probabilidad de ser de ${result.country_id}.
-                `;   
-            }else{ 
-                created.innerHTML += ` un ${result.probability} de probabilidad de ser de ${result.country_id},`;
-           };    
-        };   
-        const article = document.querySelector("article")   
-        
-        article.appendChild(created);
-        
-        
-    }
+
+          div.appendChild(btnP);
+          document.body.appendChild(div);
+        }
+      };
+
 
 button.addEventListener("click", (ev) => {     
     getResults();
 
 }); 
 
-//falta casi todo del ultimo
+
 
 
 
