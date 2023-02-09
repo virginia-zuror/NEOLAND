@@ -2,10 +2,9 @@
 
 
 import './App.css'
-import Gridd from "./Gridd/Gridd"
-
-
-
+import Main from './Main/Main'
+import Header from './Header/Header'
+import Footer from './Footer/Footer'
 
 
 
@@ -15,7 +14,15 @@ function App() {
 
   return (
     <div className="App">
-      <Gridd/>    
+    <header>
+      <Header/>
+    </header> 
+    <main>
+      <Main/>    
+    </main> 
+    <footer>
+    <Footer/>
+    </footer>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import './Gridd.css'
+import './Main.css'
 import Characters from '../Characters/Characters'
 
 const Gridd =()=>{
