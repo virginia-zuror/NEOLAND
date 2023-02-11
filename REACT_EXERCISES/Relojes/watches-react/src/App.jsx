@@ -1,22 +1,26 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
 import DigitalWatch from './components/DigitalWatch/DigitalWatch'
-import CounterBack from './components/CounterBack/CounterBack'
-import Chrono from './components/Chrono/Chrono'
+
 import './App.css'
+import { NavLink, Outlet } from 'react-router-dom'
+
 
 function App() {
   
 
   return (
     <div className="App">
-      <nav></nav>
+      <nav>
+        <NavLink to=''>Digital Watch</NavLink>
+        <NavLink to='CounterBack'>Counter Back</NavLink>
+        <NavLink to='Chrono'>Chonometer</NavLink>
+      </nav>
       <main>
-        <DigitalWatch/>
-        <CounterBack/>
-        <Chrono/>
+        <span><img src='/images/doctor-tardis.png'/></span>
+        <Outlet/>
       </main>
-      <footer></footer>
+      <footer><div className='gradient'></div></footer>
 
     </div>
   )
